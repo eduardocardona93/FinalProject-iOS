@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BEF8D7C2601C9F100D57D38 /* ExtensionsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF8D7B2601C9F100D57D38 /* ExtensionsUtil.swift */; };
 		E53E33D72600479500D5BE87 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33D62600479500D5BE87 /* LoginVC.swift */; };
 		E53E33E02600588B00D5BE87 /* Salesperson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33DF2600588B00D5BE87 /* Salesperson.swift */; };
 		E53E33E326005EB500D5BE87 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33E226005EB500D5BE87 /* RegisterVC.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9BEF8D7B2601C9F100D57D38 /* ExtensionsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsUtil.swift; sourceTree = "<group>"; };
 		E53E33D62600479500D5BE87 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E53E33DF2600588B00D5BE87 /* Salesperson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesperson.swift; sourceTree = "<group>"; };
 		E53E33E226005EB500D5BE87 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				E56675EC25FF8B06008E42FF /* Assets.xcassets */,
 				E56675EE25FF8B06008E42FF /* LaunchScreen.storyboard */,
 				E56675F125FF8B06008E42FF /* Info.plist */,
+				9BEF8D7B2601C9F100D57D38 /* ExtensionsUtil.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				E56675E425FF8B05008E42FF /* AppDelegate.swift in Sources */,
 				E56A9CCE2601AB67007E9741 /* CreateClientVC.swift in Sources */,
 				E56A9CD42601AB67007E9741 /* Order.swift in Sources */,
+				9BEF8D7C2601C9F100D57D38 /* ExtensionsUtil.swift in Sources */,
 				E56A9CD32601AB67007E9741 /* OrdersVC.swift in Sources */,
 				E53E33D72600479500D5BE87 /* LoginVC.swift in Sources */,
 				E56675E625FF8B05008E42FF /* SceneDelegate.swift in Sources */,

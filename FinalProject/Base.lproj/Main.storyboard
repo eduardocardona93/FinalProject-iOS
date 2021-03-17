@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,9 +10,9 @@
         <!--RegisterVC-->
         <scene sceneID="5Hp-p1-5ha">
             <objects>
-                <viewController id="Mmh-EI-thd" customClass="RegisterVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Mmh-EI-thd" customClass="RegisterVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PMW-Ox-Xjl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMM-g0-VeG">
@@ -30,9 +30,6 @@
                                     <navigationItem title="Register" id="YFo-Id-Icv">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Return" id="WQQ-Gs-r2t">
                                             <color key="tintColor" red="0.015686274510000001" green="0.33725490200000002" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="P31-pY-jnE"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -109,15 +106,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct2-tx-ysS">
-                                <rect key="frame" x="39" y="695" width="321" height="30"/>
+                                <rect key="frame" x="39" y="695" width="321" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="7YV-zo-AxQ"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEZ-d2-6DD">
-                                <rect key="frame" x="144" y="666" width="111" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEZ-d2-6DD">
+                                <rect key="frame" x="39" y="655" width="336" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -128,10 +129,20 @@
                         <viewLayoutGuide key="safeArea" id="Jks-TA-jCm"/>
                     </view>
                     <navigationItem key="navigationItem" id="jGP-54-sr5"/>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="8DF-Aj-uqO" id="Pv0-wI-xM3"/>
+                        <outlet property="errorMessageTextField" destination="kEZ-d2-6DD" id="IXp-9p-vt5"/>
+                        <outlet property="fullNameTextField" destination="Wes-Z7-Fo9" id="eXC-aZ-wst"/>
+                        <outlet property="passwordTextField" destination="7ua-Mb-HYW" id="hsA-EB-icI"/>
+                        <outlet property="phoneNumberTextField" destination="XKT-8n-kqe" id="QUT-Pm-RwG"/>
+                        <outlet property="retypePasswordTextField" destination="JhW-XN-Mxz" id="84j-Hg-pDw"/>
+                        <outlet property="saveButton" destination="Ct2-tx-ysS" id="Bg7-X7-nNP"/>
+                        <outlet property="userNameTextField" destination="zeJ-Km-hrM" id="PMW-bg-9aG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVq-ZE-g82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1009" y="43"/>
+            <point key="canvasLocation" x="-1010.144927536232" y="42.857142857142854"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
@@ -212,6 +223,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YAK-et-BF2"/>
                     <connections>
+                        <outlet property="loginButton" destination="qlz-XR-ADN" id="SMw-gT-4Ky"/>
                         <outlet property="loginNameField" destination="svP-ne-V4P" id="QwV-qa-HnL"/>
                         <outlet property="passwordField" destination="fiP-zt-TC7" id="Na0-sU-YlL"/>
                         <segue destination="i0h-Kn-oF5" kind="show" id="fyh-gf-nss"/>
@@ -226,7 +238,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="zIC-g2-1Pk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lDK-OW-TIy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-Lb-P7e">
@@ -736,7 +748,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="WgQ-Qm-XyP" customClass="ProductsVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eno-lN-Zg5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="689-4E-HWS">
@@ -928,15 +940,15 @@
     <resources>
         <image name="LC-full" width="800" height="236"/>
         <image name="cube.box.fill" catalog="system" width="64" height="62"/>
-        <image name="icons8-document-50" width="25" height="25"/>
+        <image name="icons8-document-50" width="16.666666030883789" height="16.666666030883789"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7nL-Rh-rvi"/>
+        <segue reference="rZR-Jf-9o9"/>
         <segue reference="Aq0-Cj-S8R"/>
         <segue reference="dg8-fk-0B8"/>
         <segue reference="KDi-iC-04B"/>
-        <segue reference="3v3-pn-fzB"/>
-        <segue reference="P31-pY-jnE"/>
+        <segue reference="zj0-yk-Kx5"/>
+        <segue reference="7YV-zo-AxQ"/>
     </inferredMetricsTieBreakers>
 </document>
