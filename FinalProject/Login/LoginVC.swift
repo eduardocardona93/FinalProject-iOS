@@ -39,9 +39,9 @@ class LoginVC: UIViewController {
         
     }
     func fillData(){
-        userList.append(Salesperson(fullname: "Eduardo Cardona", username: "eduardoacm93", password: "123456", phone: "5555555", department: "E-Commerce", email: "eduardoacm93@company.com"))
-        userList.append(Salesperson(fullname: "Ranjana", username: "ranjana", password: "778899", phone: "3232323", department: "E-Commerce", email: "ranjana@company.com"))
-        userList.append(Salesperson(fullname: "Dina Johnson", username: "dj", password: "000111", phone: "4545454", department: "CRM", email: "dj@company.com"))
+        userList.append(Salesperson(fullname: "Eduardo Cardona", username: "eduardoacm93", password: "123456", phone: "5555555",email: "eduardoacm93@company.com"))
+        userList.append(Salesperson(fullname: "Ranjana", username: "ranjana", password: "778899", phone: "3232323", email: "ranjana@company.com"))
+        userList.append(Salesperson(fullname: "Dina Johnson", username: "dj", password: "000111", phone: "4545454",  email: "dj@company.com"))
     }
 
 }

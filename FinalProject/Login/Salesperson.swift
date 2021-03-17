@@ -13,16 +13,14 @@ class Salesperson{
     var spUsername : String
     var spPassword : String
     var spPhone : String
-    var spDepartment : String
     var spEmail : String
 
     
-    init(fullname: String, username: String, password: String, phone: String, department: String, email: String) {
+    init(fullname: String, username: String, password: String, phone: String, email: String) {
         self.spFullname = fullname
         self.spUsername = username
         self.spPassword = password
         self.spPhone = phone
-        self.spDepartment = department
         self.spEmail = email
     }
     
