@@ -8,18 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		E53E33D72600479500D5BE87 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33D62600479500D5BE87 /* LoginVC.swift */; };
-		E53E33DE2600587E00D5BE87 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33DD2600587E00D5BE87 /* Client.swift */; };
 		E53E33E02600588B00D5BE87 /* Salesperson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33DF2600588B00D5BE87 /* Salesperson.swift */; };
 		E53E33E326005EB500D5BE87 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33E226005EB500D5BE87 /* RegisterVC.swift */; };
-		E53E33E52600606800D5BE87 /* CreateClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33E42600606800D5BE87 /* CreateClientVC.swift */; };
 		E56675E425FF8B05008E42FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56675E325FF8B05008E42FF /* AppDelegate.swift */; };
 		E56675E625FF8B05008E42FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56675E525FF8B05008E42FF /* SceneDelegate.swift */; };
-		E56675E825FF8B05008E42FF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56675E725FF8B05008E42FF /* HomeVC.swift */; };
 		E56675EB25FF8B05008E42FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56675E925FF8B05008E42FF /* Main.storyboard */; };
 		E56675ED25FF8B06008E42FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56675EC25FF8B06008E42FF /* Assets.xcassets */; };
 		E56675F025FF8B06008E42FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56675EE25FF8B06008E42FF /* LaunchScreen.storyboard */; };
 		E56675FB25FF8B06008E42FF /* FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56675FA25FF8B06008E42FF /* FinalProjectTests.swift */; };
 		E566760625FF8B06008E42FF /* FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E566760525FF8B06008E42FF /* FinalProjectUITests.swift */; };
+		E56A9CC92601AB67007E9741 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CB92601AB67007E9741 /* ProductsVC.swift */; };
+		E56A9CCA2601AB67007E9741 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CBA2601AB67007E9741 /* ProductCell.swift */; };
+		E56A9CCB2601AB67007E9741 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CBB2601AB67007E9741 /* ProductDetailVC.swift */; };
+		E56A9CCC2601AB67007E9741 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CBC2601AB67007E9741 /* Product.swift */; };
+		E56A9CCE2601AB67007E9741 /* CreateClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CBF2601AB67007E9741 /* CreateClientVC.swift */; };
+		E56A9CCF2601AB67007E9741 /* ClientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CC02601AB67007E9741 /* ClientsVC.swift */; };
+		E56A9CD02601AB67007E9741 /* ClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CC12601AB67007E9741 /* ClientCell.swift */; };
+		E56A9CD12601AB67007E9741 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CC22601AB67007E9741 /* Client.swift */; };
+		E56A9CD22601AB67007E9741 /* CreateOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CC42601AB67007E9741 /* CreateOrderVC.swift */; };
+		E56A9CD32601AB67007E9741 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CC52601AB67007E9741 /* OrdersVC.swift */; };
+		E56A9CD42601AB67007E9741 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CC62601AB67007E9741 /* Order.swift */; };
+		E56A9CD62601AB67007E9741 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A9CC82601AB67007E9741 /* OrderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +50,11 @@
 
 /* Begin PBXFileReference section */
 		E53E33D62600479500D5BE87 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		E53E33DD2600587E00D5BE87 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		E53E33DF2600588B00D5BE87 /* Salesperson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesperson.swift; sourceTree = "<group>"; };
 		E53E33E226005EB500D5BE87 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
-		E53E33E42600606800D5BE87 /* CreateClientVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClientVC.swift; sourceTree = "<group>"; };
 		E56675E025FF8B05008E42FF /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56675E325FF8B05008E42FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56675E525FF8B05008E42FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E56675E725FF8B05008E42FF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		E56675EA25FF8B05008E42FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E56675EC25FF8B06008E42FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E56675EF25FF8B06008E42FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +65,18 @@
 		E566760125FF8B06008E42FF /* FinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E566760525FF8B06008E42FF /* FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectUITests.swift; sourceTree = "<group>"; };
 		E566760725FF8B06008E42FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56A9CB92601AB67007E9741 /* ProductsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		E56A9CBA2601AB67007E9741 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		E56A9CBB2601AB67007E9741 /* ProductDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		E56A9CBC2601AB67007E9741 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E56A9CBF2601AB67007E9741 /* CreateClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateClientVC.swift; sourceTree = "<group>"; };
+		E56A9CC02601AB67007E9741 /* ClientsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsVC.swift; sourceTree = "<group>"; };
+		E56A9CC12601AB67007E9741 /* ClientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientCell.swift; sourceTree = "<group>"; };
+		E56A9CC22601AB67007E9741 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		E56A9CC42601AB67007E9741 /* CreateOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOrderVC.swift; sourceTree = "<group>"; };
+		E56A9CC52601AB67007E9741 /* OrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
+		E56A9CC62601AB67007E9741 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		E56A9CC82601AB67007E9741 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,30 +104,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E53E33DC2600586000D5BE87 /* Classes */ = {
+		E53E33E126005E6400D5BE87 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E53E33DD2600587E00D5BE87 /* Client.swift */,
 				E53E33DF2600588B00D5BE87 /* Salesperson.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		E53E33E126005E6400D5BE87 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				E56675E725FF8B05008E42FF /* HomeVC.swift */,
 				E53E33D62600479500D5BE87 /* LoginVC.swift */,
 				E53E33E226005EB500D5BE87 /* RegisterVC.swift */,
-				E53E33E42600606800D5BE87 /* CreateClientVC.swift */,
 			);
-			path = ViewControllers;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		E56675D725FF8B05008E42FF = {
 			isa = PBXGroup;
 			children = (
-				E53E33E126005E6400D5BE87 /* ViewControllers */,
 				E56675E225FF8B05008E42FF /* FinalProject */,
 				E56675F925FF8B06008E42FF /* FinalProjectTests */,
 				E566760425FF8B06008E42FF /* FinalProjectUITests */,
@@ -130,8 +137,11 @@
 		E56675E225FF8B05008E42FF /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				E53E33E126005E6400D5BE87 /* Login */,
+				E56A9CBE2601AB67007E9741 /* Clients */,
+				E56A9CC32601AB67007E9741 /* Orders */,
+				E56A9CB82601AB67007E9741 /* Products */,
 				E56675E325FF8B05008E42FF /* AppDelegate.swift */,
-				E53E33DC2600586000D5BE87 /* Classes */,
 				E56675E525FF8B05008E42FF /* SceneDelegate.swift */,
 				E56675E925FF8B05008E42FF /* Main.storyboard */,
 				E56675EC25FF8B06008E42FF /* Assets.xcassets */,
@@ -157,6 +167,39 @@
 				E566760725FF8B06008E42FF /* Info.plist */,
 			);
 			path = FinalProjectUITests;
+			sourceTree = "<group>";
+		};
+		E56A9CB82601AB67007E9741 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E56A9CB92601AB67007E9741 /* ProductsVC.swift */,
+				E56A9CBA2601AB67007E9741 /* ProductCell.swift */,
+				E56A9CBB2601AB67007E9741 /* ProductDetailVC.swift */,
+				E56A9CBC2601AB67007E9741 /* Product.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		E56A9CBE2601AB67007E9741 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				E56A9CBF2601AB67007E9741 /* CreateClientVC.swift */,
+				E56A9CC02601AB67007E9741 /* ClientsVC.swift */,
+				E56A9CC12601AB67007E9741 /* ClientCell.swift */,
+				E56A9CC22601AB67007E9741 /* Client.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		E56A9CC32601AB67007E9741 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				E56A9CC42601AB67007E9741 /* CreateOrderVC.swift */,
+				E56A9CC52601AB67007E9741 /* OrdersVC.swift */,
+				E56A9CC62601AB67007E9741 /* Order.swift */,
+				E56A9CC82601AB67007E9741 /* OrderCell.swift */,
+			);
+			path = Orders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,12 +333,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56675E825FF8B05008E42FF /* HomeVC.swift in Sources */,
+				E56A9CD02601AB67007E9741 /* ClientCell.swift in Sources */,
+				E56A9CC92601AB67007E9741 /* ProductsVC.swift in Sources */,
+				E56A9CCB2601AB67007E9741 /* ProductDetailVC.swift in Sources */,
 				E53E33E326005EB500D5BE87 /* RegisterVC.swift in Sources */,
-				E53E33DE2600587E00D5BE87 /* Client.swift in Sources */,
-				E53E33E52600606800D5BE87 /* CreateClientVC.swift in Sources */,
+				E56A9CCC2601AB67007E9741 /* Product.swift in Sources */,
+				E56A9CD22601AB67007E9741 /* CreateOrderVC.swift in Sources */,
+				E56A9CD62601AB67007E9741 /* OrderCell.swift in Sources */,
+				E56A9CCF2601AB67007E9741 /* ClientsVC.swift in Sources */,
+				E56A9CD12601AB67007E9741 /* Client.swift in Sources */,
 				E56675E425FF8B05008E42FF /* AppDelegate.swift in Sources */,
+				E56A9CCE2601AB67007E9741 /* CreateClientVC.swift in Sources */,
+				E56A9CD42601AB67007E9741 /* Order.swift in Sources */,
+				E56A9CD32601AB67007E9741 /* OrdersVC.swift in Sources */,
 				E53E33D72600479500D5BE87 /* LoginVC.swift in Sources */,
+				E56A9CCA2601AB67007E9741 /* ProductCell.swift in Sources */,
 				E56675E625FF8B05008E42FF /* SceneDelegate.swift in Sources */,
 				E53E33E02600588B00D5BE87 /* Salesperson.swift in Sources */,
 			);
