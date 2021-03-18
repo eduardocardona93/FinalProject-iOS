@@ -8,13 +8,23 @@
 
 import UIKit
 
+//Test Repo commit
+
+
 class LoginVC: UIViewController {
     var userList = [Salesperson]()
     @IBOutlet weak var loginNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
+        loginNameField.addDoneButtonOnKeyboard()
+        passwordField.addDoneButtonOnKeyboard()
+        loginButton.layer.cornerRadius=10
+        
         fillData()
         // Do any additional setup after loading the view.
     }
