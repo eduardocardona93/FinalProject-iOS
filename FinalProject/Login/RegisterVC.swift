@@ -25,7 +25,7 @@ class RegisterVC: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     
-    
+    var userList = [Salesperson]()	
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +36,10 @@ class RegisterVC: UIViewController {
         passwordTextField.addDoneButtonOnKeyboard()
         retypePasswordTextField.addDoneButtonOnKeyboard()
         
-        saveButton.layer.cornerRadius=10
+        passwordTextField.isSecureTextEntry = true
+        retypePasswordTextField.isSecureTextEntry = true
+        errorMessageTextField.text = ""
+        saveButton.layer.cornerRadius = 10
         
         
         
@@ -45,19 +48,19 @@ class RegisterVC: UIViewController {
     
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
+        let logVC = segue.destination as! LoginVC
+        logVC.userList = userList
      }
-     */
-    
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if(inputFieldsValidated()){
+        if identifier == "returnRegister" || ( identifier == "userRegistered" && inputFieldsValidated()){
             return true
         }else{
             return false
@@ -103,7 +106,7 @@ class RegisterVC: UIViewController {
             errorMessageTextField.text="Password Mismatched"
             return false
         }
-        
+        userList.append(Salesperson(fullname: fullNameTextField.text!, username: userNameTextField.text!, password: phoneNumberTextField.text!, phone: emailAddressTextField.text!,email: passwordTextField.text! ))
         return true
     }
     

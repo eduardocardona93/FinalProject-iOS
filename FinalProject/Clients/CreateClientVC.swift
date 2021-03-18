@@ -9,7 +9,11 @@
 import UIKit
 
 class CreateClientVC: UIViewController {
-    var clientList = [Client]()
+    var ordersList = [Order]()
+    var clientsList = [Client]()
+    var userList = [Salesperson]()
+    var userLogged : Salesperson? = nil
+    
     var clientIndex = -1
     
     @IBOutlet weak var identificationField: UITextField!
@@ -21,7 +25,7 @@ class CreateClientVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if clientIndex >= 0 {
-            let currClient = clientList[clientIndex]
+            let currClient = clientsList[clientIndex]
             identificationField.text = currClient.clientIdentification
             fullnameField.text = currClient.clientFullName
             typeField.text = currClient.clientType
@@ -36,15 +40,15 @@ class CreateClientVC: UIViewController {
     @IBAction func saveClick(_ sender: Any) {
         let editClient = Client(identification: identificationField.text! , fullName: fullnameField.text! , type: typeField.text! , companyCode: companyField.text! , phoneNumber: phoneField.text! , email: emailField.text! )
         if clientIndex >= 0 {
-            clientList[clientIndex] = editClient
+            clientsList[clientIndex] = editClient
         }else{
-            clientList.append(editClient)
+            clientsList.append(editClient)
         }
         
         
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -52,6 +56,6 @@ class CreateClientVC: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

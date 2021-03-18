@@ -9,7 +9,10 @@
 import UIKit
 
 class CreateOrderVC: UIViewController {
-
+    var ordersList = [Order]()
+    var clientsList = [Client]()
+    var userList = [Salesperson]()
+    var userLogged : Salesperson? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +20,7 @@ class CreateOrderVC: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -25,6 +28,6 @@ class CreateOrderVC: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

@@ -31,7 +31,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Return" id="WQQ-Gs-r2t">
                                             <color key="tintColor" red="0.015686274510000001" green="0.33725490200000002" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="P31-pY-jnE"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="returnRegister" id="P31-pY-jnE"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -115,9 +115,12 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="userRegistered" id="1s9-EN-uSG"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEZ-d2-6DD">
-                                <rect key="frame" x="144" y="666" width="111" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEZ-d2-6DD">
+                                <rect key="frame" x="50" y="632" width="314" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -128,10 +131,20 @@
                         <viewLayoutGuide key="safeArea" id="Jks-TA-jCm"/>
                     </view>
                     <navigationItem key="navigationItem" id="jGP-54-sr5"/>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="8DF-Aj-uqO" id="4lS-pw-hdJ"/>
+                        <outlet property="errorMessageTextField" destination="kEZ-d2-6DD" id="wSW-n9-CBW"/>
+                        <outlet property="fullNameTextField" destination="Wes-Z7-Fo9" id="7hP-9h-gcn"/>
+                        <outlet property="passwordTextField" destination="7ua-Mb-HYW" id="nYg-rd-mXK"/>
+                        <outlet property="phoneNumberTextField" destination="XKT-8n-kqe" id="jvd-OH-ga6"/>
+                        <outlet property="retypePasswordTextField" destination="JhW-XN-Mxz" id="s3b-8O-0cD"/>
+                        <outlet property="saveButton" destination="Ct2-tx-ysS" id="aHV-eK-xnh"/>
+                        <outlet property="userNameTextField" destination="zeJ-Km-hrM" id="r5x-iK-EHE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVq-ZE-g82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1009" y="43"/>
+            <point key="canvasLocation" x="-1804" y="-688"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
@@ -170,8 +183,7 @@
                                     <color key="titleShadowColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zdb-18-SUl"/>
-                                    <segue destination="Mmh-EI-thd" kind="show" id="kt4-d8-qtD"/>
+                                    <segue destination="Mmh-EI-thd" kind="show" identifier="register" id="kt4-d8-qtD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVl-zp-T8h">
@@ -193,7 +205,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlz-XR-ADN">
-                                <rect key="frame" x="50" y="600" width="314" height="47"/>
+                                <rect key="frame" x="50" y="626" width="314" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -206,27 +218,108 @@
                                     <action selector="loginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sq-cY-76Y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUX-wj-xHb">
+                                <rect key="frame" x="50" y="577" width="314" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="YAK-et-BF2"/>
                     <connections>
+                        <outlet property="errorLoginLabel" destination="kUX-wj-xHb" id="z4H-Yv-C5z"/>
+                        <outlet property="loginButton" destination="qlz-XR-ADN" id="wfR-fC-kCh"/>
                         <outlet property="loginNameField" destination="svP-ne-V4P" id="QwV-qa-HnL"/>
                         <outlet property="passwordField" destination="fiP-zt-TC7" id="Na0-sU-YlL"/>
-                        <segue destination="i0h-Kn-oF5" kind="show" id="fyh-gf-nss"/>
+                        <segue destination="L3o-lE-MXD" kind="show" identifier="userLogged" id="ynk-BP-fX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="4"/>
+            <point key="canvasLocation" x="-874" y="-688"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="6iZ-GW-PuE">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="L3o-lE-MXD" customClass="HomeVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSH-YZ-cJG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Meg-aG-llL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Home" id="FpW-T4-NmQ">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="1J1-1p-Unv">
+                                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="GDr-xt-LRj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doc.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="k8O-g5-JEq">
+                                <rect key="frame" x="60" y="150" width="120" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cube.box.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0vt-Vv-mJZ">
+                                <rect key="frame" x="60" y="549.5" width="120" height="150.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="955-bV-5UV">
+                                <rect key="frame" x="60" y="351.5" width="120" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlO-vd-8jf">
+                                <rect key="frame" x="60" y="350" width="254" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Clients        "/>
+                                <connections>
+                                    <segue destination="zIC-g2-1Pk" kind="show" identifier="toClients" id="GOd-9z-8rR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-MC-70l">
+                                <rect key="frame" x="60" y="550" width="284" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Products"/>
+                                <connections>
+                                    <segue destination="WgQ-Qm-XyP" kind="show" identifier="toProducts" id="2dU-CY-XlO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykm-I7-iFI">
+                                <rect key="frame" x="60" y="150" width="254" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Orders      "/>
+                                <connections>
+                                    <segue destination="640-gS-SdV" kind="show" identifier="toOrders" id="1kD-PD-kWT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tlL-y1-qEY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mgu-ng-LY8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HU1-XF-2rq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="-688.39285714285711"/>
         </scene>
         <!--Clients-->
         <scene sceneID="Icc-Bb-vLM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="zIC-g2-1Pk" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="zIC-g2-1Pk" customClass="ClientsVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lDK-OW-TIy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-Lb-P7e">
@@ -281,16 +374,16 @@
                                 <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Clients" id="xQd-1D-BeG">
-                                        <barButtonItem key="leftBarButtonItem" title="+ Create" id="6f9-m3-Ewb">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Return" id="91b-Nh-wsG">
+                                            <color key="tintColor" red="0.015686274510000001" green="0.33725490200000002" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="L3o-lE-MXD" kind="show" identifier="clientsToHome" id="tJo-ql-QTk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="+ Create" id="6f9-m3-Ewb">
                                             <color key="tintColor" red="0.015686274510000001" green="0.33725490200000002" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="MKh-3Q-Vsk" kind="show" identifier="addClient" id="esR-St-16q"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="ioo-eK-T3B">
-                                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="logoutClients" id="oQp-vi-SfU"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -310,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RV4-To-2Ju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="-1477"/>
+            <point key="canvasLocation" x="1474" y="-826"/>
         </scene>
         <!--Client Detail-->
         <scene sceneID="t2q-q2-3g4">
@@ -444,34 +537,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1oY-cp-BE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2319" y="-1477"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="eMm-zm-pfg">
-            <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="i0h-Kn-oF5" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="XMf-DU-AwR"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yc1-BA-6hg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="640-gS-SdV" kind="relationship" relationship="viewControllers" id="dg8-fk-0B8"/>
-                        <segue destination="zIC-g2-1Pk" kind="relationship" relationship="viewControllers" id="3v3-pn-fzB"/>
-                        <segue destination="WgQ-Qm-XyP" kind="relationship" relationship="viewControllers" id="7nL-Rh-rvi"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YE6-8K-1Ua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="203" y="-987"/>
+            <point key="canvasLocation" x="2287" y="-826"/>
         </scene>
         <!--Orders-->
         <scene sceneID="y5o-4D-9YC">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="640-gS-SdV" customClass="OrdersVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2se-hd-sN9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MJf-i0-3lf">
@@ -521,16 +594,16 @@
                                 <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Orders" id="FbF-OV-WtD">
-                                        <barButtonItem key="leftBarButtonItem" title="+ Add" id="Fea-HD-fHC">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Return" id="3bB-hi-O6w">
+                                            <color key="tintColor" red="0.015686274510000001" green="0.33725490200000002" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="L3o-lE-MXD" kind="show" identifier="ordersToHome" id="vb4-MI-W9w"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="+ Add" id="Fea-HD-fHC">
                                             <color key="tintColor" red="0.015686274510000001" green="0.33725490200000002" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="8gm-95-k7B" kind="show" identifier="addOrder" id="Aq0-Cj-S8R"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="DHI-OF-3q8">
-                                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="logoutOrder" id="R1n-cF-ted"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -552,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2X5-YJ-baf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507" y="-817"/>
+            <point key="canvasLocation" x="1474" y="-1620"/>
         </scene>
         <!--Order Detail-->
         <scene sceneID="lCg-XG-1hR">
@@ -729,14 +802,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLe-kC-rwM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2288" y="-817"/>
+            <point key="canvasLocation" x="2255" y="-1620"/>
         </scene>
         <!--Products-->
         <scene sceneID="8tg-jY-f1a">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="WgQ-Qm-XyP" customClass="ProductsVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eno-lN-Zg5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="689-4E-HWS">
@@ -745,10 +818,10 @@
                                 <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Products" id="5oP-iu-riC">
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="ggf-TL-bHy">
-                                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Return" id="W40-0B-BFP">
+                                            <color key="tintColor" red="0.015686274510000001" green="0.33725490200000002" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="logoutProducts" id="UUX-3e-fl6"/>
+                                                <segue destination="L3o-lE-MXD" kind="show" identifier="productsToHome" id="v3K-Pg-30O"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -832,7 +905,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdM-vV-ddD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="-105"/>
+            <point key="canvasLocation" x="1474" y="-92"/>
         </scene>
         <!--Product Detail-->
         <scene sceneID="hc1-vS-RxQ">
@@ -922,21 +995,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QB-az-WZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287" y="-107"/>
+            <point key="canvasLocation" x="2255" y="-94"/>
         </scene>
     </scenes>
     <resources>
         <image name="LC-full" width="800" height="236"/>
         <image name="cube.box.fill" catalog="system" width="64" height="62"/>
+        <image name="doc.fill" catalog="system" width="56" height="64"/>
         <image name="icons8-document-50" width="25" height="25"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7nL-Rh-rvi"/>
-        <segue reference="Aq0-Cj-S8R"/>
-        <segue reference="dg8-fk-0B8"/>
+        <segue reference="2dU-CY-XlO"/>
+        <segue reference="6y4-No-TPr"/>
+        <segue reference="1kD-PD-kWT"/>
         <segue reference="KDi-iC-04B"/>
         <segue reference="zj0-yk-Kx5"/>
-        <segue reference="P31-pY-jnE"/>
+        <segue reference="vb4-MI-W9w"/>
+        <segue reference="GDr-xt-LRj"/>
     </inferredMetricsTieBreakers>
 </document>
