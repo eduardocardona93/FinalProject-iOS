@@ -13,7 +13,7 @@ class CreateOrderVC: UIViewController {
     var clientsList = [Client]()
     var userList = [Salesperson]()
     var userLogged : Salesperson? = nil
-
+    
     var orderIndex = -1
     
     @IBOutlet weak var orderIdLabel: UILabel!
@@ -33,7 +33,7 @@ class CreateOrderVC: UIViewController {
         super.viewDidLoad()
         if orderIndex >= 0 {
             let currOrder = ordersList[orderIndex]
-
+            
         }else if ordersList.count > 0 {
             let lastOrder = ordersList[ordersList.count - 1].orderId
             orderIdLabel.text = String(format: "%06d", Int(lastOrder)! + 1)
@@ -43,24 +43,28 @@ class CreateOrderVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let orderVC = segue.destination as! OrdersVC
-        orderVC.userList = userList
-        orderVC.ordersList = ordersList
-        orderVC.clientsList = clientsList
-        orderVC.userLogged = userLogged
+        if segue.identifier == "saveOrder"{
+            
+            
+            let orderVC = segue.destination as! OrdersVC
+            orderVC.userList = userList
+            orderVC.ordersList = ordersList
+            orderVC.clientsList = clientsList
+            orderVC.userLogged = userLogged
+        }
     }
     
     @IBAction func saveClick(_ sender: Any) {
         if inputFieldsValidated(){
-                 
+            
             
             performSegue(withIdentifier: "saveOrder", sender: self)
         }

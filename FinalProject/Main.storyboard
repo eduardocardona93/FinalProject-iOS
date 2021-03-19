@@ -10,9 +10,9 @@
         <!--RegisterVC-->
         <scene sceneID="5Hp-p1-5ha">
             <objects>
-                <viewController id="Mmh-EI-thd" customClass="RegisterVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Mmh-EI-thd" customClass="RegisterVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PMW-Ox-Xjl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMM-g0-VeG">
@@ -844,6 +844,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdR-qa-MZz">
+                                <rect key="frame" x="348" y="740" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Mesage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0al-fb-X3N">
                                 <rect key="frame" x="18" y="749" width="376" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1086,9 +1091,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="2dU-CY-XlO"/>
         <segue reference="rJw-fa-Wjy"/>
-        <segue reference="8bt-oq-B4d"/>
+        <segue reference="1kD-PD-kWT"/>
         <segue reference="QBU-29-Hbe"/>
-        <segue reference="zj0-yk-Kx5"/>
+        <segue reference="GOd-9z-8rR"/>
         <segue reference="vb4-MI-W9w"/>
         <segue reference="P31-pY-jnE"/>
     </inferredMetricsTieBreakers>
