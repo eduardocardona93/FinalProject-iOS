@@ -27,7 +27,7 @@ class ProductCell: UITableViewCell {
     func setProductCell(product: Product){
         productid.text = String(product.prodId)
         productName.text = product.prodName
-        productImg.image = UIImage(named: product.prodImageSet[0])
+        productImg.image = UIImage(named: String(product.prodId))
     }
 
 

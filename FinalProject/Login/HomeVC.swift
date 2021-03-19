@@ -14,9 +14,10 @@ class HomeVC: UIViewController {
     var clientsList = [Client]()
     var userLogged : Salesperson?
     
+    @IBOutlet weak var userNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userNameLabel.text = userLogged!.spUsername
         // Do any additional setup after loading the view.
     }
     

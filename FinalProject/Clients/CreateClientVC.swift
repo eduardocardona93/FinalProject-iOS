@@ -21,14 +21,14 @@ class CreateClientVC: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var companyField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
-    @IBOutlet weak var typeField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorLabel.text = ""
         if clientIndex >= 0 {
             let currClient = clientsList[clientIndex]
             identificationField.text = currClient.clientIdentification
             fullnameField.text = currClient.clientFullName
-            typeField.text = currClient.clientType
             companyField.text = currClient.clientCompanyCode
             phoneField.text = currClient.clientPhoneNumber
             emailField.text = currClient.clientEmail
@@ -38,12 +38,18 @@ class CreateClientVC: UIViewController {
     }
     
     @IBAction func saveClick(_ sender: Any) {
-        let editClient = Client(identification: identificationField.text! , fullName: fullnameField.text! , type: typeField.text! , companyCode: companyField.text! , phoneNumber: phoneField.text! , email: emailField.text! )
-        if clientIndex >= 0 {
-            clientsList[clientIndex] = editClient
-        }else{
-            clientsList.append(editClient)
+        if inputFieldsValidated(){
+            let editClient = Client(identification: identificationField.text! , fullName: fullnameField.text! ,  companyCode: companyField.text! , phoneNumber: phoneField.text! , email: emailField.text! )
+            if clientIndex >= 0 {
+                clientsList[clientIndex] = editClient
+            }else{
+                clientsList.append(editClient)
+            }
+           
+            performSegue(withIdentifier: "saveClient", sender: self)
         }
+
+        
         
         
     }
@@ -55,7 +61,48 @@ class CreateClientVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let clientVC = segue.destination as! ClientsVC
+        clientVC.userList = userList
+        clientVC.ordersList = ordersList
+        clientVC.clientsList = clientsList
+        clientVC.userLogged = userLogged
     }
     
+
+        // check if User details are valid
+    func inputFieldsValidated() -> Bool {
+        self.identificationField.text = identificationField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.fullnameField.text = fullnameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.phoneField.text = phoneField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.emailField.text = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.companyField.text = companyField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if self.identificationField.text?.count == 0 {
+            errorLabel.text="Enter Identification"
+            return false
+        }
+        else if self.fullnameField.text?.count == 0 {
+            errorLabel.text="Enter Full Name"
+            return false
+        }
+        else if self.phoneField.text?.count == 0 {
+            errorLabel.text = "Enter Phone Number"
+            return false
+        }
+        else if self.emailField.text?.count == 0 {
+            errorLabel.text="Enter Email"
+            return false
+        }
+        else if self.companyField.text?.count == 0 {
+            errorLabel.text="Enter Company Code"
+            return false
+        }
+        else if self.emailField.text?.count == 0 {
+            errorLabel.text="Enter Email"
+            return false
+        }
+
+        return true
+    }
 
 }

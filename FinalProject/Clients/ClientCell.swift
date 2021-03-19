@@ -10,6 +10,8 @@ import UIKit
 
 class ClientCell: UITableViewCell {
 
+    @IBOutlet weak var clientNameLabel: UILabel!
+    @IBOutlet weak var clientIdLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,11 @@ class ClientCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setClientCell(client: Client){
+        clientNameLabel.text = client.clientFullName
+        clientIdLabel.text = client.clientIdentification
+    }
+    
 
 }

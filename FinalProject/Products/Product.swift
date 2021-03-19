@@ -12,15 +12,13 @@ class Product {
     var prodId: Int
     var prodName: String
     var prodDescription: String
-    var prodPrice: String
-    var prodImageSet: [String]
+    var prodPrice: Double
     
-    init(id: Int, name: String, description: String, price: String, imageSet: [String]) {
+    init(id: Int, name: String, price: Double, description: String) {
         self.prodId = id
         self.prodName = name
         self.prodDescription = description
         self.prodPrice = price
-        self.prodImageSet = imageSet
     }
     
 }   

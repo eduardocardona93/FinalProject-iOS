@@ -15,10 +15,19 @@ class OrderCell: UITableViewCell {
         // Initialization code
     }
 
+    @IBOutlet weak var orderIdLabel: UILabel!
+    @IBOutlet weak var orderClientIdLabel: UILabel!
+    @IBOutlet weak var orderAmountLabel: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setOrder(order: Order){
+        orderIdLabel.text = order.orderId
+        orderClientIdLabel.text = order.orderClient
+        orderAmountLabel.text = String(format: "%.2f", order.orderAmount)
     }
 
 }

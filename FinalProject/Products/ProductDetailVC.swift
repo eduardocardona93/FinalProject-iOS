@@ -13,8 +13,26 @@ class ProductDetailVC: UIViewController {
     var clientsList = [Client]()
     var userList = [Salesperson]()
     var userLogged : Salesperson? = nil
+    var selectedProduct : Product? = nil
+    
+    
+    @IBOutlet weak var prodIdLabel: UILabel!
+    
+    @IBOutlet weak var prodNameLabel: UILabel!
+    @IBOutlet weak var prodPriceLabel: UILabel!
+    @IBOutlet weak var prodDescText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        prodPriceLabel.text = "$ " + String(format: "%.2f", selectedProduct!.prodPrice)
+        prodIdLabel.text = String(selectedProduct!.prodId)
+        prodNameLabel.text = selectedProduct!.prodName
+        prodDescText.text = selectedProduct!.prodDescription
+        // prodDescText.text = String(selectedProduct!.prodId)
+        
+        
+
+
+
 
         // Do any additional setup after loading the view.
     }
@@ -27,6 +45,11 @@ class ProductDetailVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let productVC = segue.destination as! ProductVC
+        productVC.userList = userList
+        productVC.ordersList = ordersList
+        productVC.clientsList = clientsList
+        productVC.userLogged = userLogged
     }
     
 

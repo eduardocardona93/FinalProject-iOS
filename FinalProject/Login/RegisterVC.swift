@@ -24,8 +24,10 @@ class RegisterVC: UIViewController {
     
     
     @IBOutlet weak var saveButton: UIButton!
-    
-    var userList = [Salesperson]()	
+    var ordersList = [Order]()
+    var clientsList = [Client]()
+    var userList = [Salesperson]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,10 +59,13 @@ class RegisterVC: UIViewController {
      // Pass the selected object to the new view controller.
         let logVC = segue.destination as! LoginVC
         logVC.userList = userList
+        logVC.ordersList = ordersList
+        logVC.clientsList = clientsList
      }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "returnRegister" || ( identifier == "userRegistered" && inputFieldsValidated()){
+            
             return true
         }else{
             return false
@@ -70,7 +75,6 @@ class RegisterVC: UIViewController {
     
     // check if User details are valid
     func inputFieldsValidated() -> Bool {
-        
         self.fullNameTextField.text = fullNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         self.userNameTextField.text = userNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         self.phoneNumberTextField.text = phoneNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)

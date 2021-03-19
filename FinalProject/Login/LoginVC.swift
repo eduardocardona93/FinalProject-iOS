@@ -44,6 +44,9 @@ class LoginVC: UIViewController {
         if segue.identifier == "register" {
             let regVC = segue.destination as! RegisterVC
             regVC.userList = userList
+            regVC.ordersList = ordersList
+            regVC.clientsList = clientsList
+            
         }else if segue.identifier == "userLogged" {
             let homeVC = segue.destination as! HomeVC
             
