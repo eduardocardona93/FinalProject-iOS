@@ -16,12 +16,12 @@ class Order{
     var orderBgColor: String
     var orderFontColor: String
     var orderFontStyle: String
-    var orderWidth: Double
-    var orderHeight: Double
+    var orderWidth: Int
+    var orderHeight: Int
     var orderQuantity: Int
     var orderAmount: Double
 
-init( id: String, client: String, product: String, bgColor: String, fontColor: String, fontStyle: String, width: Double, height: Double, quantity: Int, amount: Double ) {
+init( id: String, client: String, product: String, bgColor: String, fontColor: String, fontStyle: String, width: Int, height: Int, quantity: Int, amount: Double ) {
         self.orderId = id
         self.orderClient = client
         self.orderProduct = product

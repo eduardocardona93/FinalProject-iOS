@@ -69,7 +69,7 @@ class ProductVC: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
     
 	func fillProducts(){
-        producstList.append(Product(id: 100, name: "inkjet printer paper", price: 10.0, description: "this type of papper is designed for specific use with"))
+        producstList.append(Product(id: 100, name: "Inkjet printer paper", price: 10.0, description: "this type of papper is designed for specific use with"))
         producstList.append(Product(id: 200, name: "Matte", price: 5.0, description: "particularly for those seeking a softer, smoother appearance that minimizes glare."))
         producstList.append(Product(id: 300, name: "Bright White", price: 5.0, description: "it is Multipurpose Office Paper is very suitable to be used in fast speeds and hassle-free printers and copiers"))
         producstList.append(Product(id: 400, name: "Glossy", price: 15.0, description: "It is a high quality resin coated photographic paper with a glossy finish."))

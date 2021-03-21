@@ -11,6 +11,8 @@
 		E53E33D72600479500D5BE87 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33D62600479500D5BE87 /* LoginVC.swift */; };
 		E53E33E02600588B00D5BE87 /* Salesperson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33DF2600588B00D5BE87 /* Salesperson.swift */; };
 		E53E33E326005EB500D5BE87 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E33E226005EB500D5BE87 /* RegisterVC.swift */; };
+		E53E7EEC26055795000CABF6 /* EditFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E7EEB26055795000CABF6 /* EditFieldVC.swift */; };
+		E53E7EEE26055805000CABF6 /* FieldValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E7EED26055805000CABF6 /* FieldValueCell.swift */; };
 		E56675E425FF8B05008E42FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56675E325FF8B05008E42FF /* AppDelegate.swift */; };
 		E56675E625FF8B05008E42FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56675E525FF8B05008E42FF /* SceneDelegate.swift */; };
 		E56675ED25FF8B06008E42FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56675EC25FF8B06008E42FF /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		E53E33D62600479500D5BE87 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E53E33DF2600588B00D5BE87 /* Salesperson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesperson.swift; sourceTree = "<group>"; };
 		E53E33E226005EB500D5BE87 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		E53E7EEB26055795000CABF6 /* EditFieldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFieldVC.swift; sourceTree = "<group>"; };
+		E53E7EED26055805000CABF6 /* FieldValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValueCell.swift; sourceTree = "<group>"; };
 		E56675E025FF8B05008E42FF /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56675E325FF8B05008E42FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56675E525FF8B05008E42FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 				E59BBF8E2603036F00F21DF0 /* HomeVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E53E7EEA2605573A000CABF6 /* Field Edit */ = {
+			isa = PBXGroup;
+			children = (
+				E53E7EEB26055795000CABF6 /* EditFieldVC.swift */,
+				E53E7EED26055805000CABF6 /* FieldValueCell.swift */,
+			);
+			path = "Field Edit";
 			sourceTree = "<group>";
 		};
 		E56675D725FF8B05008E42FF = {
@@ -189,6 +202,7 @@
 		E56A9CC32601AB67007E9741 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				E53E7EEA2605573A000CABF6 /* Field Edit */,
 				E56A9CC42601AB67007E9741 /* CreateOrderVC.swift */,
 				E56A9CC52601AB67007E9741 /* OrdersVC.swift */,
 				E56A9CC62601AB67007E9741 /* Order.swift */,
@@ -340,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56A9CD02601AB67007E9741 /* ClientCell.swift in Sources */,
+				E53E7EEE26055805000CABF6 /* FieldValueCell.swift in Sources */,
 				E53E33E326005EB500D5BE87 /* RegisterVC.swift in Sources */,
 				E56A9CD22601AB67007E9741 /* CreateOrderVC.swift in Sources */,
 				E56A9CD62601AB67007E9741 /* OrderCell.swift in Sources */,
@@ -358,6 +373,7 @@
 				E56675E625FF8B05008E42FF /* SceneDelegate.swift in Sources */,
 				E59BBF8F2603036F00F21DF0 /* HomeVC.swift in Sources */,
 				E53E33E02600588B00D5BE87 /* Salesperson.swift in Sources */,
+				E53E7EEC26055795000CABF6 /* EditFieldVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
