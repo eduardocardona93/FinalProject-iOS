@@ -29,13 +29,13 @@ class ClientsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var clientsList = [Client]()
     var userList = [Salesperson]()
     var userLogged : Salesperson? = nil
+    var producstList = [Product]()
     var clientIndex = -1
     @IBOutlet weak var clientsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         clientsTable.delegate = self
         clientsTable.dataSource = self
-        fillClients()
         // Do any additional setup after loading the view.
     }
     
@@ -54,6 +54,7 @@ class ClientsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             homeVC.ordersList = ordersList
             homeVC.clientsList = clientsList
             homeVC.userLogged = userLogged
+            homeVC.producstList = producstList
             
         case "addClient", "editClient":
             let createVC = segue.destination as! CreateClientVC
@@ -61,18 +62,13 @@ class ClientsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             createVC.ordersList = ordersList
             createVC.clientsList = clientsList
             createVC.userLogged = userLogged
+            createVC.producstList = producstList
             createVC.clientIndex = clientIndex
         default:
             break
         }
     }
 
-    func fillClients(){
-        if clientsList.count == 0 {
-            clientsList.append(Client( identification: "111111" , fullName: "Rasagjna Ghandi" , companyCode: "21554" , phoneNumber: "913133337755" , email: "example1@company1.com" ))
-            clientsList.append(Client( identification: "222222" , fullName: "Lino Hernandez" , companyCode: "21553" , phoneNumber: "915133436754" , email: "example2@company2.com" ))
-        }
-    }
     
 
 }

@@ -20,8 +20,8 @@ class Order{
     var orderHeight: Int
     var orderQuantity: Int
     var orderAmount: Double
-
-init( id: String, client: String, product: String, bgColor: String, fontColor: String, fontStyle: String, width: Int, height: Int, quantity: Int, amount: Double ) {
+    var orderPaperPrice: Double
+init( id: String, client: String, product: String, bgColor: String, fontColor: String, fontStyle: String, width: Int, height: Int, quantity: Int, amount: Double, paperPrice: Double ) {
         self.orderId = id
         self.orderClient = client
         self.orderProduct = product
@@ -32,6 +32,7 @@ init( id: String, client: String, product: String, bgColor: String, fontColor: S
         self.orderHeight = height
         self.orderQuantity = quantity
         self.orderAmount = amount
+        self.orderPaperPrice = paperPrice
     
 }
 

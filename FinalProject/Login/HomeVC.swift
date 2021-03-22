@@ -13,11 +13,13 @@ class HomeVC: UIViewController {
     var ordersList = [Order]()
     var clientsList = [Client]()
     var userLogged : Salesperson?
-    
+    var producstList = [Product]()
+
     @IBOutlet weak var userNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = userLogged!.spUsername
+
         // Do any additional setup after loading the view.
     }
     
@@ -33,28 +35,33 @@ class HomeVC: UIViewController {
             let logVC = segue.destination as! LoginVC
             logVC.ordersList = ordersList
             logVC.clientsList = clientsList
+            logVC.producstList = producstList
         case "toProducts":
             let prodVC = segue.destination as! ProductVC
             prodVC.userList = userList
             prodVC.ordersList = ordersList
             prodVC.clientsList = clientsList
             prodVC.userLogged = userLogged
+            prodVC.producstList = producstList
         case "toClients":
             let cliVC = segue.destination as! ClientsVC
             cliVC.userList = userList
             cliVC.ordersList = ordersList
             cliVC.clientsList = clientsList
             cliVC.userLogged = userLogged
+            cliVC.producstList = producstList
         case "toOrders":
             let ordVC = segue.destination as! OrdersVC
             ordVC.userList = userList
             ordVC.ordersList = ordersList
             ordVC.clientsList = clientsList
             ordVC.userLogged = userLogged
+            ordVC.producstList = producstList
         default:
             break
         }
     }
-    
+
+
 
 }

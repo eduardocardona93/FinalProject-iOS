@@ -27,7 +27,7 @@ class RegisterVC: UIViewController {
     var ordersList = [Order]()
     var clientsList = [Client]()
     var userList = [Salesperson]()
-
+    var producstList = [Product]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,19 +37,13 @@ class RegisterVC: UIViewController {
         emailAddressTextField.addDoneButtonOnKeyboard()
         passwordTextField.addDoneButtonOnKeyboard()
         retypePasswordTextField.addDoneButtonOnKeyboard()
-        
+
         passwordTextField.isSecureTextEntry = true
         retypePasswordTextField.isSecureTextEntry = true
         errorMessageTextField.text = ""
-        saveButton.layer.cornerRadius = 10
-        
-        
-        
-        // Do any additional setup after loading the view.
+        saveButton.layer.cornerRadius = 10    
+           // Do any additional setup after loading the view.
     }
-    
-    
-    
     
      // MARK: - Navigation
      
@@ -61,11 +55,11 @@ class RegisterVC: UIViewController {
         logVC.userList = userList
         logVC.ordersList = ordersList
         logVC.clientsList = clientsList
+        logVC.producstList = producstList
      }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "returnRegister" || ( identifier == "userRegistered" && inputFieldsValidated()){
-            
             return true
         }else{
             return false

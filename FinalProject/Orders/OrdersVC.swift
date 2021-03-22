@@ -30,9 +30,13 @@ class OrdersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var userList = [Salesperson]()
     var userLogged : Salesperson? = nil
     var orderIndex = -1
+    var producstList = [Product]()
     @IBOutlet weak var ordersTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        ordersTable.delegate = self
+        ordersTable.dataSource = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -52,6 +56,7 @@ class OrdersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             homeVC.ordersList = ordersList
             homeVC.clientsList = clientsList
             homeVC.userLogged = userLogged
+            homeVC.producstList = producstList
             
         case "addOrder", "editOrder":
             let createVC = segue.destination as! CreateOrderVC
@@ -59,6 +64,7 @@ class OrdersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             createVC.ordersList = ordersList
             createVC.clientsList = clientsList
             createVC.userLogged = userLogged
+            createVC.producstList = producstList
             createVC.orderIndex = orderIndex
         default:
             break

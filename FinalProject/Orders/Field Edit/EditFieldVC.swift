@@ -15,13 +15,16 @@ class EditFieldVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let option = optionsArray[indexPath.row]
-        let cell = valuesTable.dequeueReusableCell(withIdentifier: "optionRow") as! FieldValueCell
+        let cell = valuesTable.dequeueReusableCell(withIdentifier: "fieldValueRow") as! FieldValueCell
         cell.setLabel(option:option)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         valueFieldsArray[valueFieldsIndex] = optionsArray[indexPath.row]
+        if(valueFieldsIndex == 2){
+            valueFieldsArray[9] = String(producstList[indexPath.row].prodPrice)
+        }
         performSegue(withIdentifier: "selectedField", sender: self)
     }
     
@@ -29,6 +32,7 @@ class EditFieldVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     var clientsList = [Client]()
     var userList = [Salesperson]()
     var userLogged : Salesperson? = nil
+    var producstList = [Product]()
     var orderIndex = -1
     var valueFieldsArray = [String]()
     var valueFieldsIndex = 0
@@ -58,12 +62,9 @@ class EditFieldVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         orderVC.clientsList = clientsList
         orderVC.userLogged = userLogged
         orderVC.orderIndex = orderIndex
+        orderVC.producstList = producstList
         orderVC.valueFieldsIndex = valueFieldsIndex
         orderVC.valueFieldsArray = valueFieldsArray
-
-        if segue.identifier == "selectedField"{
-            
-        }
     }
 
     func initDataArray(){

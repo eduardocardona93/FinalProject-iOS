@@ -13,7 +13,7 @@ class CreateClientVC: UIViewController {
     var clientsList = [Client]()
     var userList = [Salesperson]()
     var userLogged : Salesperson? = nil
-    
+    var producstList = [Product]()
     var clientIndex = -1
     
     @IBOutlet weak var identificationField: UITextField!
@@ -66,6 +66,7 @@ class CreateClientVC: UIViewController {
         clientVC.ordersList = ordersList
         clientVC.clientsList = clientsList
         clientVC.userLogged = userLogged
+        clientVC.producstList = producstList
     }
     
 

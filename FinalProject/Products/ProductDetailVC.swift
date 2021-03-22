@@ -14,8 +14,9 @@ class ProductDetailVC: UIViewController {
     var userList = [Salesperson]()
     var userLogged : Salesperson? = nil
     var selectedProduct : Product? = nil
+    var producstList = [Product]()
     
-    
+    @IBOutlet weak var prodImage: UIImageView!
     @IBOutlet weak var prodIdLabel: UILabel!
     
     @IBOutlet weak var prodNameLabel: UILabel!
@@ -27,6 +28,7 @@ class ProductDetailVC: UIViewController {
         prodIdLabel.text = String(selectedProduct!.prodId)
         prodNameLabel.text = selectedProduct!.prodName
         prodDescText.text = selectedProduct!.prodDescription
+        prodImage.image = UIImage(named: String(selectedProduct!.prodId))
         // prodDescText.text = String(selectedProduct!.prodId)
         
         
@@ -50,6 +52,7 @@ class ProductDetailVC: UIViewController {
         productVC.ordersList = ordersList
         productVC.clientsList = clientsList
         productVC.userLogged = userLogged
+        productVC.producstList = producstList
     }
     
 
